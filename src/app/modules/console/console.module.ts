@@ -13,6 +13,9 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import { FindProductComponent } from './inner-items/dashboard-context/items/manage-product/find-product/find-product.component';
+import { UpdateProductComponent } from './inner-items/dashboard-context/items/manage-product/update-product/update-product.component';
+import { DeleteProductComponent } from './inner-items/dashboard-context/items/manage-product/delete-product/delete-product.component';
+import { AllProductsComponent } from './inner-items/dashboard-context/items/manage-product/all-products/all-products.component';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import { FindProductComponent } from './inner-items/dashboard-context/items/mana
     ManageProductComponent,
     MainConsoleHeaderComponent,
     NewProductComponent,
-    FindProductComponent
+    FindProductComponent,
+    UpdateProductComponent,
+    DeleteProductComponent,
+    AllProductsComponent
   ],
   imports: [
     CommonModule,
