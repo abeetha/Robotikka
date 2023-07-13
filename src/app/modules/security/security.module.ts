@@ -10,6 +10,8 @@ import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {ReactiveFormsModule} from "@angular/forms";
 import { SecurityHeaderComponent } from './components/security-header/security-header.component';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import { VerificationComponent } from './components/verification/verification.component';
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import { SecurityHeaderComponent } from './components/security-header/security-h
     SecurityComponent,
     LoginComponent,
     SignupComponent,
-    SecurityHeaderComponent
+    SecurityHeaderComponent,
+    VerificationComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +28,8 @@ import { SecurityHeaderComponent } from './components/security-header/security-h
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ]
 })
 export class SecurityModule { }

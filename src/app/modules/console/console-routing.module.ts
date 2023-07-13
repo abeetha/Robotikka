@@ -4,6 +4,7 @@ import { ConsoleComponent } from './console.component';
 import {DashboardContextComponent} from "./inner-items/dashboard-context/dashboard-context.component";
 import {ManageProductComponent} from "./inner-items/dashboard-context/items/manage-product/manage-product.component";
 import {NewProductComponent} from "./inner-items/dashboard-context/items/manage-product/new-product/new-product.component";
+import {FindProductComponent} from "./inner-items/dashboard-context/items/manage-product/find-product/find-product.component";
 
 const routes: Routes = [
   {
@@ -13,7 +14,8 @@ const routes: Routes = [
         path:'playground',component:DashboardContextComponent,children:[
           {
             path:'product',component:ManageProductComponent,children:[
-              {path:'new',component:NewProductComponent}
+              {path:'new',component:NewProductComponent},
+              {path:'find',component:FindProductComponent}
             ]
           }
         ]

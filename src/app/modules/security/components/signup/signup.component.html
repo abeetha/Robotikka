@@ -2,26 +2,30 @@
   <div class="inner">
     <h2 class="header-text">Register Here!</h2>
     <hr>
-    <form class="security-form">
+    <form class="security-form" [formGroup]="registerForm" >
       <mat-form-field class="full-width" appearance="outline">
         <mat-label>First Name</mat-label>
-        <input type="text" matInput placeholder="Ex. Abeetha">
+        <input formControlName="firstName" type="text" matInput placeholder="Ex. Abeetha">
       </mat-form-field>
       <mat-form-field class="full-width" appearance="outline">
         <mat-label>Last Name</mat-label>
-        <input type="text" matInput placeholder="Ex. Abeysundera">
+        <input formControlName="lastName"  type="text" matInput placeholder="Ex. Abeysundera">
+      </mat-form-field>
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input formControlName="contact"  type="tel" matInput placeholder="Ex. 011">
       </mat-form-field>
       <mat-form-field class="full-width" appearance="outline">
         <mat-label>Email</mat-label>
-        <input type="email" matInput placeholder="Ex. Abeysundera">
+        <input formControlName="email" type="email" matInput placeholder="Ex. @gmail.com">
       </mat-form-field>
       <mat-form-field class="full-width" appearance="outline">
         <mat-label>Password</mat-label>
-        <input type="password" matInput>
+        <input formControlName="password" type="password" matInput>
       </mat-form-field>
-      <button type="button" mat-raised-button color="primary" (click)="signup()">Register Now</button>
+      <button type="button" [disabled]="registerForm.invalid"  mat-raised-button color="primary" (click)="signup()">Register Now</button>
       <p style="text-align: center; margin-top: 10px">OR</p>
-      <button type="button" mat-raised-button color="warn" routerLink="/security/signup">Already have an Account</button>
+      <button type="button" mat-raised-button color="warn" routerLink="/security/signup" style="position: relative; z-index: 1!important;">Already have an Account</button>
     </form>
   </div>
 </div>

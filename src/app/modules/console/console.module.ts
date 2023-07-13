@@ -9,6 +9,10 @@ import { NewProductComponent} from "./inner-items/dashboard-context/items/manage
 import { MainConsoleHeaderComponent } from './components/main-console-header/main-console-header.component';
 import {MatFormField, MatFormFieldModule, MatLabel} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatButtonModule} from "@angular/material/button";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+import { FindProductComponent } from './inner-items/dashboard-context/items/manage-product/find-product/find-product.component';
 
 
 @NgModule({
@@ -17,13 +21,17 @@ import {MatInputModule} from "@angular/material/input";
     DashboardContextComponent,
     NewProductComponent,
     ManageProductComponent,
-    MainConsoleHeaderComponent
+    MainConsoleHeaderComponent,
+    NewProductComponent,
+    FindProductComponent
   ],
   imports: [
     CommonModule,
     ConsoleRoutingModule,
+    MatInputModule,
     MatFormFieldModule,
-    MatInputModule
+    MatButtonModule,
+    ReactiveFormsModule
   ]
 })
 export class ConsoleModule { }
