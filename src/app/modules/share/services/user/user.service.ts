@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {map, Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -23,4 +23,16 @@ export class UserService {
 
     })
   }
+  login(email: string, password: string):Observable<any> {
+    return this.http.post('http://localhost:8001/login',{
+      username: email,
+      password: password
+    },{
+      observe: 'response' as 'body'
+    })
+      .pipe(map(data=>{
+        return data;
+      }))
+  }
+
 }

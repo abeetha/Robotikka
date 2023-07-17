@@ -9,6 +9,10 @@ import {HttpManagerInterceptor} from "./modules/share/interceptor/http-manager.i
 import {ShareModule} from "./modules/share/share.module";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {FormsModule} from "@angular/forms";
+
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -20,9 +24,11 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     BrowserAnimationsModule,
     HttpClientModule,
     ShareModule,
-
+    FormsModule,
+    MatPaginatorModule
   ],
   providers: [
+    CookieService,
     {
       provide:HTTP_INTERCEPTORS,
       useClass:HttpManagerInterceptor,
